@@ -9,7 +9,7 @@ import requests
 import json
 import base64
 
-base_url = "http://127.0.0.1:8000"
+base_url = "http://127.0.0.1:9021"
 
 
 def create_chat_completion(model, messages, temperature=0.8, max_tokens=2048, top_p=0.8, use_stream=False):

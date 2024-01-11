@@ -27,6 +27,7 @@ RUN python -m spacy download en_core_web_sm
 
 COPY . .
 
-CMD bash
+EXPOSE 80
 # python ./basic_demo/cli_demo_hf.py --from_pretrained THUDM/cogagent-chat-hf --quant 4
 # python ./basic_demo/web_demo.py --from_pretrained cogagent-chat --version chat --quant 4
+CMD python openai_demo/openai_api.py
