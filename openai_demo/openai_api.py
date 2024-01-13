@@ -17,7 +17,7 @@ from transformers import AutoModelForCausalLM, LlamaTokenizer, PreTrainedModel, 
 from PIL import Image
 from io import BytesIO
 
-MODEL_PATH = os.environ.get('MODEL_PATH', 'THUDM/cogvlm-chat-hf')
+MODEL_PATH = os.environ.get('MODEL_PATH', 'THUDM/cogagent-chat-hf')  # THUDM/cogvlm-chat-hf, THUDM/cogagent-chat-hf
 TOKENIZER_PATH = os.environ.get("TOKENIZER_PATH", 'lmsys/vicuna-7b-v1.5')
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 if os.environ.get('QUANT_ENABLED'):
@@ -148,7 +148,7 @@ async def list_models():
     An endpoint to list available models. It returns a list of model cards.
     This is useful for clients to query and understand what models are available for use.
     """
-    model_card = ModelCard(id="cogvlm-chat-17b")  # can be replaced by your model id like cogagent-chat-18b
+    model_card = ModelCard(id="cogagent-chat-18b")  # can be replaced by your model id like cogvlm-chat-17b, cogagent-chat-18b
     return ModelList(data=[model_card])
 
 
